@@ -1,6 +1,7 @@
+/* eslint-disable no-console */
+import colors from 'colors';
 import mongoose from 'mongoose';
 import app from './app';
-import colors from 'colors';
 import config from './config';
 
 async function main() {
