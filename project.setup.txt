@@ -1,0 +1,21 @@
+1. project setup istall neccesery files such as express mongoose cors dotenv ts-node-dev typescript
+2. configure eslint setup and edit package.json file
+    1."dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    2."lint:check": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    3."lint:fix": "eslint . --fix",
+3.configure prettier and edit package.json file
+    1."prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    2."prettier:fix": "prettier --write .",
+    3."lint-prettier": "yarn lint:check && yarn prettier:check",
+4.configure husky setup
+    1.inside .husky folder edit precommit file : yarn lint-staged
+5.configure lint staged
+    1.  "lint-staged": {
+    "src/**/*ts": "yarn lint-prettier"
+  },
+6.configure logger
+    1.customize logger
+7.configure logger dialy rotate 
+    1.create a logs folder 
+        1.create folder and files called errors
+        2.create folder and files called successes
